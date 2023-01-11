@@ -16,7 +16,8 @@ class Server {
 
         // Http server
         this.server = http.createServer( this.app );
-        
+        //conexión con la base de datos
+
         // Configuraciones de sockets
         this.io = socketio( this.server, { /* configuraciones */ } );
     }
@@ -26,7 +27,7 @@ class Server {
         this.app.use( express.static( path.resolve( __dirname, '../public' ) ) );
 
         // CORS
-        this.app.use( cors() );
+       /// this.app.use( cors() );
 
     }
 
